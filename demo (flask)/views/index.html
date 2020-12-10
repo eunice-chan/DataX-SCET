@@ -1,0 +1,573 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Activity Recommender</title>
+    <meta name="description" content="DataX Fall 2020 SCET Project Demo">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        Activity Recommender
+      </h1>
+    </header>
+
+    <main>
+      <form action="/recommend" method="POST">
+        <div class="row">
+          <div class="column">
+            <h2>
+              About You
+            </h2>
+            
+           <label>Age</label>
+            <input name="age1" type="text" maxlength="3" placeholder="Age" />
+
+            <br />
+            <br />
+
+            <label>Gender</label>
+            <select name="gender1">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Non-binary">Non-binary</option>
+            </select>
+
+            <br />
+            <br />
+
+            <fieldset>
+              <legend>When is your preferred time to hang out with friends?</legend>
+             <input type="checkbox" name="time1" value="Weekdays during the day" id="weekdayday1" /><label for="weekdayday1">Weekdays during the day</label>
+              <br/>
+              <input type="checkbox" name="time1" value="Weekdays at night" id="weekdaynight1" /><label for="weekdaynight1">Weekdays at night</label>
+              <br/>
+              <input type="checkbox" name="time1" value="Weekends during the day" id="weekendday1" /><label for="weekendday1">Weekends during the day</label>
+              <br/>
+              <input type="checkbox" name="time1" value="Weekends at night" id="weekendnight1" /><label for="weekendnight1">Weekends at night</label>
+            </fieldset>
+
+            <br />
+            <br />
+
+            <fieldset>
+              <legend>What is your preferred way of spending time with friends?</legend>
+              <input type="checkbox" name="activities1" value="Electronically: messaging, calling, video-chatting, etc." id="virtual1" /><label for="virtual1">Electronically: messaging, calling, video-chatting, etc.</label>
+              <br>
+              <input type="checkbox" name="activities1" value="Grabbing foods or drinks together" id="food1" /><label for="food1">Grabbing foods or drinks together</label>
+              <br>
+              <input type="checkbox" name="activities1" value="Playing sport, painting, picnicing, going out to the city, etc." id="active1" /><label for="active1">Playing sport, painting, picnicing, going out to the city, etc.</label>
+              <br>
+              <input type="checkbox" name="activities1" value="Studying together" id="academic1" /><label for="academic1">Studying together</label>
+            </fieldset>
+
+            <br />
+            <br />
+
+            <label>How often do you like to spend time with your friends?</label>
+            <select name="freq1">
+              <option value="Everyday">Every day</option>
+              <option value="2-3 times a week">2-3 times a week</option>
+              <option value="Once a week">Once a week</option>
+              <option value="Every other week">Every other week</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>How many people do you like to spend time with at once?</label>
+            <select name="size1">
+              <option value="One-on-one only">One-on-one only</option>
+              <option value="Small groups (up to 5 people)">Small groups (up to 5 people)</option>
+              <option value="Big groups (more than 5 people)">Big groups (more than 5 people)</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>How outdoorsy are you?</label>
+            <select name="outdoor1">
+              <option value="Very outdoorsy">Very outdoorsy</option>
+              <option value="Somewhat outdoorsy">Somewhat outdoorsy</option>
+              <option value="More or less">More or less</option>
+              <option value="Not really outdoorsy">Not really outdoorsy</option>
+              <option value="Not outdoorsy at all<">Not outdoorsy at all</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>What is your college major?</label>
+            <select name="major1">
+              <option value="STEM">STEM</option>
+              <option value="Social Sciences">Social Sciences</option>
+              <option value="Humanities">Humanities</option>
+              <option value="Arts">Arts</option>
+              <option value="Business">Business</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>What is your top love language?</label>
+            <select name="lovelang1">
+              <option value="Quality time">Quality Time</option>
+              <option value="Words of Affirmation">Words of Affirmation</option>
+              <option value="Gifts">Gifts</option>
+              <option value="Physical touch">Physical Touch</option>
+              <option value="Acts of service">Acts of Service</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Introvert or extrovert?</label>
+            <select name="vert1">
+              <option value="Introvert">Introvert</option>
+              <option value="Extrovert">Extrovert</option>
+            </select>
+ <!-- 
+            <br />
+            <br />
+
+           <label>Rank these activities on how much you enjoy them. (5 is most enjoyable)</label>
+
+            <br />
+            <br />
+
+            <label>Hiking</label>
+            <select name="hiking1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Journaling</label>
+            <select name="journaling1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Reading nonfiction</label>
+            <select name="nonfic1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Drawing</label>
+            <select name="drawing1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Hanging out with friends. (pre-COVID)</label>
+            <select name="hanging1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Social distance exercise (walk, run, etc.)</label>
+            <select name="exercise1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Netflix party</label>
+            <select name="netflix1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Video chat hangout</label>
+            <select name="videochat1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Wine tasting/Cocktail shake up</label>
+            <select name="alc1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Trivia contests</label>
+            <select name="trivia1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Virtual escape room</label>
+            <select name="esc1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Arts and crafts</label>
+            <select name="crafts1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select> -->
+
+          </div>
+          <div class="column">
+            <h2>
+              About Your Friend
+            </h2>
+            
+           <label>Age</label>
+            <input name="age2" type="text" maxlength="3" placeholder="Age" />
+
+            <br />
+            <br />
+
+            <label>Gender</label>
+            <select name="gender2">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Non-binary">Non-binary</option>
+            </select>
+
+            <br />
+            <br />
+
+            <fieldset>
+              <legend>When is your preferred time to hang out with friends?</legend>
+             <input type="checkbox" name="time2" value="Weekdays during the day" id="weekdayday2" /><label for="weekdayday2">Weekdays during the day</label>
+              <br/>
+              <input type="checkbox" name="time2" value="Weekdays at night" id="weekdaynight2" /><label for="weekdaynight2">Weekdays at night</label>
+              <br/>
+              <input type="checkbox" name="time2" value="Weekends during the day" id="weekendday2" /><label for="weekendday2">Weekends during the day</label>
+              <br/>
+              <input type="checkbox" name="time2" value="Weekends at night" id="weekendnight2" /><label for="weekendnight2">Weekends at night</label>
+            </fieldset>
+
+            <br />
+            <br />
+
+            <fieldset>
+              <legend>What is your preferred way of spending time with friends?</legend>
+              <input type="checkbox" name="activities2" value="Electronically: messaging, calling, video-chatting, etc." id="virtual2" /><label for="virtual2">Electronically: messaging, calling, video-chatting, etc.</label>
+              <br>
+              <input type="checkbox" name="activities2" value="Grabbing foods or drinks together" id="food2" /><label for="food2">Grabbing foods or drinks together</label>
+              <br>
+              <input type="checkbox" name="activities2" value="Playing sport, painting, picnicing, going out to the city, etc." id="active2" /><label for="active2">Playing sport, painting, picnicing, going out to the city, etc.</label>
+              <br>
+              <input type="checkbox" name="activities2" value="Studying together" id="academic2" /><label for="academic2">Studying together</label>
+            </fieldset>
+
+            <br />
+            <br />
+
+            <label>How often do you like to spend time with your friends?</label>
+            <select name="freq2">
+              <option value="Everyday">Every day</option>
+              <option value="2-3 times a week">2-3 times a week</option>
+              <option value="Once a week">Once a week</option>
+              <option value="Every other week">Every other week</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>How many people do you like to spend time with at once?</label>
+            <select name="size2">
+              <option value="One-on-one only">One-on-one only</option>
+              <option value="Small groups (up to 5 people)">Small groups (up to 5 people)</option>
+              <option value="Big groups (more than 5 people)">Big groups (more than 5 people)</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>How outdoorsy are you?</label>
+            <select name="outdoor2">
+              <option value="Very outdoorsy">Very outdoorsy</option>
+              <option value="Somewhat outdoorsy">Somewhat outdoorsy</option>
+              <option value="More or less">More or less</option>
+              <option value="Not really outdoorsy">Not really outdoorsy</option>
+              <option value="Not outdoorsy at all<">Not outdoorsy at all</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>What is your college major?</label>
+            <select name="major2">
+              <option value="STEM">STEM</option>
+              <option value="Social Sciences">Social Sciences</option>
+              <option value="Humanities">Humanities</option>
+              <option value="Arts">Arts</option>
+              <option value="Business">Business</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>What is your top love language?</label>
+            <select name="lovelang2">
+              <option value="Quality time">Quality Time</option>
+              <option value="Words of Affirmation">Words of Affirmation</option>
+              <option value="Gifts">Gifts</option>
+              <option value="Physical touch">Physical Touch</option>
+              <option value="Acts of service">Acts of Service</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Introvert or extrovert?</label>
+            <select name="vert2">
+              <option value="Introvert">Introvert</option>
+              <option value="Extrovert">Extrovert</option>
+            </select>
+
+
+  <!--      <br />
+            <br />
+
+            <label>Rank these activities on how much you enjoy them. (5 is most enjoyable)</label>
+
+            <br />
+            <br />
+
+            <label>Hiking</label>
+            <select name="hiking2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Journaling</label>
+            <select name="journaling2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Reading nonfiction</label>
+            <select name="nonfic2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Drawing</label>
+            <select name="drawing2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Hanging out with friends. (pre-COVID)</label>
+            <select name="hanging2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Social distance exercise (walk, run, etc.)</label>
+            <select name="exercise2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Netflix party</label>
+            <select name="netflix2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Video chat hangout</label>
+            <select name="videochat2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Wine tasting/Cocktail shake up</label>
+            <select name="alc2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Trivia contests</label>
+            <select name="trivia2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Virtual escape room</label>
+            <select name="esc2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <br />
+            <br />
+
+            <label>Arts and crafts</label>
+            <select name="crafts2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select> -->
+
+          </div>
+        </div>
+        <div class="centered">				
+          <button type="submit">Give me a recommendation!</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      DataX Fall 2020 SCET Project Demo
+    </footer>
+
+  </body>
+
+</html>

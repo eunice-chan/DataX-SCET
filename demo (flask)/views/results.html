@@ -1,0 +1,77 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Activity Recommender</title>
+    <meta name="description" content="DataX Fall 2020 SCET Project Demo">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        Activity Recommender
+      </h1>
+    </header>
+
+    <main>
+      <section class="results">
+        <i>Note: many combination of values lead to the same suggestions with the same ranking. This has been looked into and determined to not be a bug,
+        but due to the current small size of the dataset and the layered nature of our algorithhm.</i>
+        <br/><br/>
+<!--         We've crunched the numbers! Out of the activities in our dataset, these are the top 10 activities for you and your friend: -->
+       
+        <!--         <div class="row">
+          <div class="column">
+            <h3>Your Top {{N}} Activites</h3>
+            <ol>
+              {% for activity, rank in u1 %}
+              <li>{{activity}} ({{rank | round}})</li>
+              {% endfor %}
+            </ol>
+          </div>
+          <div class="column">
+            <h3>Your Friend's Top {{N}} Activites</h3>
+            <ol>
+              {% for activity, rank in u2 %}
+              <li>{{activity}} ({{rank | round}})</li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div> -->
+        
+        <br/>
+        <br/>
+        
+        <div>
+          <h3>Top {{N}} Suggested Activites</h3>
+          We've crunched the numbers! Based on our algorithm, these are the top 10 activities we recommend for you two:
+          <ol>
+              {% for activity, rank in match %}
+              <li>{{activity}}</li>
+              {% endfor %}
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      DataX Fall 2020 SCET Project Demo
+    </footer>
+
+  </body>
+
+</html>
