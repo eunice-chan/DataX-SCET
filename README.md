@@ -15,10 +15,11 @@
 | flask (demo)/*                      | Contains code for demo (more information below). |
 
 ## Our Approaches
+### Supervised Learning
   In the supervised learning model, it first loads in the Google forms data and converts it into a dataframe. Then another dataframe labeled “individual_acitivity” is created that cleans the elements of the dataframe and only contains all of the activity ranking responses. A “relationships” datatframe is created to pair each user in the dataframe with all of the other users, to then make and “activities_df” that includes each user pair for each activity, and both of the users rankings  for that specific activity. Also, so we don’t have to load in the google forms data each time, we use base_path that maps the data from the google form into the dataframes. Before the data gets preprocessed, we create a “full_relationship_data” dataframe by merging the relationships and individual_data, and activities frames all together. This dataframe then gets OneHotEncoder to convert the categorical data into indices. For testing purposes, the data gets split into train, test, and validation data. Once the data was ready, multiple linear regression was performed using both SVR and decision tree models. Both however performed very poorly, so this is when we pivoted to collaborative filtering.   
-  
+### Collaborative Filtering
   In the collaborative filtering model, the data is imported and preprocessed the same way as it was in the supervised learning model. To create the collaborative filtering algorithm, three  methods are created including the similarity, similarity_to_user, and suggest_acitivty. The similarity function uses the built in sklearn, cosine_similarity function to compute the cosine similarity between two imputed matrices. Similarity_to_user inputs a specific user and all other users in an array, then computes the cosine similarity between the user and every other user using the similarity function, which is returned as an array. The suggest_acitivity function first scores all other users by how similar they are to the given user using the similariy_to_user method. Then it multiplies the similarity of the users with the activity score (inputted). Then from the top N (inputted value) most similar rows, t finds the most common features, assuming features are independent, which belong to the ideal activity. Based on the features of the ideal activity, it scores activities based on how similar the features are to the top features. This function then returns an ordered list of activities ranked by its similarity to the ideal activity. Before this gets applied to all users, random pairs are created and the responses in the dataframes are cleaned. After this, the suggest_acitivity function is applied to each pair. This is the current model we are using to generate nudges.   
-  
+ ### Next Steps 
   For the future of the model, we create another file labeled “Future_Direction” that imports datasets that ideally will contain different events around a city. This will give us a wider range of potential activity suggestions to nudge people, while still using the collaborative filtering algorithm.  
 
 # About the Data
@@ -31,7 +32,7 @@ You can view the suggestions given to the participants in our small-scale deploy
 # How to Run
 We provide two ways to interface with our solution: (1) ipynb with the algorithm and (2) a web demo.
 
-# ipynb
+# .ipynb
 To demo the ipynbs, please generate synthetic data or collect actual data in the form shown in the `.ipynb`s. Once that is done, simply run through all the cells.
 
 # Demo
