@@ -20,5 +20,5 @@ Survey used to collect the data can be found [here](https://docs.google.com/form
 | Future_Direction.ipynb        | Prototype of how it would interact with live events (a future direction). |
 
 # Demo
-A demo can be found [here](https://modern-productive-cheque.glitch.me).
+A demo can be found [here](https://modern-productive-cheque.glitch.me).  
 The associated code is uploaded to the repository, but can also be found [here](https://glitch.com/edit/#!/modern-productive-cheque).
