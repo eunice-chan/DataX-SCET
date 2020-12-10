@@ -1,13 +1,3 @@
-CSV file of response data not included to protect the privacy of the participants. The `.ipynb` files include the head/tail of the data to show representative data. To demo the ipynbs, please generate synthetic data or collect actual data in the form shown in the `.ipynb`s and simply run through all the cells.
-
-Survey used to collect the data can be found [here](https://docs.google.com/forms/d/e/1FAIpQLSc0vSS6KeY69VW-CB-nO3ZT569Zq73CD1di9bMIdFD40qp70g/viewform). 
-
-| Filename                      | Description |
-| :---------------------------: | :---------: | 
-| Supervised_Models.ipynb       | Initial formulation as a supervised learning task using a Support Vector Multi-Output Regression and a Decision Tree Multi-Output Regression  | 
-| Collaborative_Filtering.ipynb | Second solution attempt using collaborative filtering. |
-| Future_Direction.ipynb        | Prototype of how it would interact with live events (a future direction). |
-
 # Project Overview
   It has always been difficult to maintain and create new interpersonal relationships. However, now due to quarantine, the typical channels of hanging out with your friends, having study groups, and bumping into one another are closed off due to social distancing. So, more than ever, college students find themselves isolated and as a result, their mental health suffers. Social media, despite its name, does not provide a very good job at encouraging people to keep connected or establish new connections on their platform. Our solution creates a social media platform that utilizes data signals and behavioral economics to nudge users to interact with and deepen the bonds with their community. Our nudges will include activities that people should do with a specific person that they are friends wirth or are in a campus organization with. To create our model, we tried two different methods including supervised learning, and collaborative filtering.  
   
@@ -16,3 +6,15 @@ Survey used to collect the data can be found [here](https://docs.google.com/form
   In the collaborative filtering model, the data is imported and preprocessed the same way as it was in the supervised learning model. To create the collaborative filtering algorithm, three  methods are created including the similarity, similarity_to_user, and suggest_acitivty. The similarity function uses the built in sklearn, cosine_similairty function to compute the cosine similarity between two imputed matrices. Similarity_to_user inputs a specific user and all other users in an array, then computes the cosine similarity between the user and every other user using the similarity function, which is returned as an array. The suggest_acitivity function first scores all other users by how similar they are to the given user using the similariy_to_user method. Then it multiplies the similarity of the users with the activity score (inputted). Then from the top N (inputted value) most similar rows, t finds the most common features, assuming features are independent, which belong to the ideal activity. Based on the features of the ideal activity, it scores activities based on how similar the features are to the top features. This function then returns an ordered list of activities ranked by its similarity to the ideal activity. Before this gets applied to all users, random pairs are created and the responses in the dataframes are cleaned. After this, the suggest_acitivity function is applied to each pair. This is the current model we are using to generate nudges.   
   
   For the future of the model, we create another file labeled “Future_Direction” that imports datasets that ideally will contain different events around a city. This will give us a wider range of potential activity suggestions to nudge people, while still using the collaborative filtering algorithm.  
+
+# About the Data
+CSV file of response data not included to protect the privacy of the participants. The `.ipynb` files include the head/tail of the data to show representative data. To demo the ipynbs, please generate synthetic data or collect actual data in the form shown in the `.ipynb`s and simply run through all the cells.
+
+Survey used to collect the data can be found [here](https://docs.google.com/forms/d/e/1FAIpQLSc0vSS6KeY69VW-CB-nO3ZT569Zq73CD1di9bMIdFD40qp70g/viewform). 
+
+# Repo Overview
+| Filename                      | Description |
+| :---------------------------: | :---------: | 
+| Supervised_Models.ipynb       | Initial formulation as a supervised learning task using a Support Vector Multi-Output Regression and a Decision Tree Multi-Output Regression  | 
+| Collaborative_Filtering.ipynb | Second solution attempt using collaborative filtering. |
+| Future_Direction.ipynb        | Prototype of how it would interact with live events (a future direction). |
