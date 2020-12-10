@@ -1,4 +1,4 @@
-Ranked Suggestions for User 1 and User 12
+# Ranked Suggestions for User 1 and User 12
 1.  Picnic (1.4142135623730951)
 2.  Workout Session (1.4142135623730951)
 3.  Grabbing Food Or Drinks Together (1.7320508075688772)
@@ -13,7 +13,7 @@ Ranked Suggestions for User 1 and User 12
 12. Book Club (2.449489742783178)
 13. Online Shopping Session (2.449489742783178)
 
-Ranked Suggestions for User 2 and User 13
+# Ranked Suggestions for User 2 and User 13
 1.  Picnic (1.4142135623730951)
 2.  Workout Session (1.4142135623730951)
 3.  Grabbing Food Or Drinks Together (1.7320508075688772)
@@ -28,7 +28,7 @@ Ranked Suggestions for User 2 and User 13
 12. Book Club (2.449489742783178)
 13. Online Shopping Session (2.449489742783178)
 
-Ranked Suggestions for User 4 and User 0
+# Ranked Suggestions for User 4 and User 0
 1.  Online Shopping Session (0.0)
 2.  Group Games (Among Us, Code Names, Etc.) (1.0)
 3.  Video Games (1.0)
@@ -43,7 +43,7 @@ Ranked Suggestions for User 4 and User 0
 12. Self-Care Sheet Mask + Tea Session (2.0)
 13. Grabbing Food Or Drinks Together (2.23606797749979)
 
-Ranked Suggestions for User 5 and User 15
+# Ranked Suggestions for User 5 and User 15
 1.  Group Games (Among Us, Code Names, Etc.) (0.0)
 2.  Video Games (0.0)
 3.  Karaoke (0.0)
@@ -58,7 +58,7 @@ Ranked Suggestions for User 5 and User 15
 12. Grabbing Food Or Drinks Together (2.0)
 13. Workout Session (2.23606797749979)
 
-Ranked Suggestions for User 6 and User 16
+# Ranked Suggestions for User 6 and User 16
 1.  Picnic (1.4142135623730951)
 2.  Workout Session (1.4142135623730951)
 3.  Grabbing Food Or Drinks Together (1.7320508075688772)
@@ -73,7 +73,7 @@ Ranked Suggestions for User 6 and User 16
 12. Book Club (2.449489742783178)
 13. Online Shopping Session (2.449489742783178)
 
-Ranked Suggestions for User 7 and User 17
+# Ranked Suggestions for User 7 and User 17
 1.  Picnic (1.4142135623730951)
 2.  Workout Session (1.4142135623730951)
 3.  Grabbing Food Or Drinks Together (1.7320508075688772)
@@ -88,7 +88,7 @@ Ranked Suggestions for User 7 and User 17
 12. Book Club (2.449489742783178)
 13. Online Shopping Session (2.449489742783178)
 
-Ranked Suggestions for User 8 and User 18
+# Ranked Suggestions for User 8 and User 18
 1.  Picnic (1.4142135623730951)
 2.  Workout Session (1.4142135623730951)
 3.  Grabbing Food Or Drinks Together (1.7320508075688772)
@@ -103,7 +103,7 @@ Ranked Suggestions for User 8 and User 18
 12. Book Club (2.449489742783178)
 13. Online Shopping Session (2.449489742783178)
 
-Ranked Suggestions for User 9 and User 19
+# Ranked Suggestions for User 9 and User 19
 1.  Picnic (1.4142135623730951)
 2.  Workout Session (1.4142135623730951)
 3.  Grabbing Food Or Drinks Together (1.7320508075688772)
@@ -118,7 +118,7 @@ Ranked Suggestions for User 9 and User 19
 12. Book Club (2.449489742783178)
 13. Online Shopping Session (2.449489742783178)
 
-Ranked Suggestions for User 10 and User 20
+# Ranked Suggestions for User 10 and User 20
 1.  Cooking/Baking Class (0.0)
 2.  Cooking/Baking Competition (0.0)
 3.  Picnic (1.0)
@@ -133,7 +133,7 @@ Ranked Suggestions for User 10 and User 20
 12. Study Together (2.23606797749979)
 13. Workout Session (2.23606797749979)
 
-Ranked Suggestions for User 11 and User 0
+# Ranked Suggestions for User 11 and User 0
 1.  Self-Care Sheet Mask + Tea Session (1.4142135623730951)
 2.  Online Shopping Session (1.4142135623730951)
 3.  Group Games (Among Us, Code Names, Etc.) (1.7320508075688772)
